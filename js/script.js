@@ -9,7 +9,7 @@ const resultado = document.getElementById('resultado');
 function gerarQuestao() {
     const num1 = Math.floor(Math.random() * 10) + 1;
     const num2 = Math.floor(Math.random() * 10) + 1;
-    const operacao = Math.random() > 0.5 ? '+' : '*';
+    const operacao = Math.random() > 0.5 ? '+' : '*'; //escolhe um número entre 0 ou 1, dependendo muda a operação
 
     questaoAtual = {
         question: `${num1} ${operacao} ${num2}`,
@@ -28,10 +28,6 @@ function clean() {
     resultado.innerHTML = "";
 }
 
-function back() {
-    const resultado = resultado.innerHTML;
-    resultado.innerHTML = resultado.substring(0, resultado.length - 1);
-}
 
 // recupera dados salvos ao carregar a página
 window.onload = function () {
